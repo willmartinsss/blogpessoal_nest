@@ -3,6 +3,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { ProdService } from './data/services/prod.services';
+import { AuthModule } from './auth/auth.module';
+import { UsuarioModule } from './Usuarios/usuario.module';
+import { TemaModule } from './tema/tema.module'; 
+import { PostagemModule } from './postagem/postagem.module'; 
 
 @Module({
   imports: [
@@ -11,6 +15,10 @@ import { ProdService } from './data/services/prod.services';
       useClass: ProdService,
       imports: [ConfigModule],
     }),
+    AuthModule,
+    UsuarioModule,
+    TemaModule,
+    PostagemModule,
   ],
   controllers: [AppController],
   providers: [],
