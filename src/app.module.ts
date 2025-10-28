@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { ProdService } from './data/services/prod.services';
-import { AuthModule } from './a/auth.module';
+import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './Usuarios/usuario.module';
 import { TemaModule } from './tema/tema.module'; 
 import { PostagemModule } from './postagem/postagem.module'; 
