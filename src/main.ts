@@ -24,7 +24,12 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   app.enableCors({
-    origin: 'https://blogpessoal-nest-nmj3.onrender.com', // Substitua pelo domínio permitido
+    
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:3000', 
+      'https://blogpessoal-nest-nmj3.onrender.com', // Produção
+    ],
     methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
     allowedHeaders: 'Content-Type, Authorization', // Cabeçalhos permitidos
   });
