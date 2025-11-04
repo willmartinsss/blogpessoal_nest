@@ -23,11 +23,14 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
+  //lembrar que toda vez que tiver uma nova url atualizar aqui
   app.enableCors({    
     origin: [
       'http://localhost:5173',
       'http://localhost:3000', 
       'https://blogpessoal-nest-nmj3.onrender.com', // Produção
+      'https://blogpessoal-react-mauve.vercel.app', 
+
     ],
     methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
     allowedHeaders: 'Content-Type, Authorization', // Cabeçalhos permitidos
